@@ -22,9 +22,9 @@ export default function Navbar() {
 
       {/* Navigation links */}
       <ul
-        className={`lg:flex lg:space-x-6 ${
+        className={`lg:flex lg:flex-row flex-col lg:space-x-6 space-y-2 lg:space-y-0 ${
           isMenuOpen ? "flex" : "hidden"
-        } lg:flex-row space-y-2 flex-col absolute lg:static top-16 left-0 w-full bg-background rounded-lg mx-2 text-foreground lg:bg-transparent justify-center p-4 lg:p-0`}
+        } absolute lg:static top-16 left-0 w-full bg-background rounded-lg mx-2 text-foreground lg:bg-transparent justify-center p-4 lg:p-0`}
       >
         <li>
           <Link href="/" className="nav-link">

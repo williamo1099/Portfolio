@@ -15,7 +15,7 @@ module.exports = {
         warning: "",
         success: "",
         background: "#F5F5F5",
-        foreground: "#3C4D16",
+        foreground: "#000000",
       },
     },
   },

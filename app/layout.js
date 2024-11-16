@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-background flex flex-col min-h-screen">
+      <body className="antialiased bg-background text-foreground flex flex-col min-h-screen">
         {/* Navigation Bar */}
         <Navbar />
 
