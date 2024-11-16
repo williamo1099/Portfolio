@@ -10,7 +10,7 @@ export default function HomePage() {
       <div className="relative z-10 text-left">
         {/* Name */}
         <h1 className="text-2xl font-bold">
-          I'm{" "}
+          I&apos;m{" "}
           <span className="ml-1 text-5xl font-bold text-primary hover:underline">
             William Oktavianus
           </span>

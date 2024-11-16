@@ -1,28 +1,29 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav className="absolute top-0 w-full z-50 p-4 flex justify-center">
       <ul className="flex space-x-6">
         <li>
-          <a href="/" className="nav-link">
+          <Link href="/" className="nav-link">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/about-me" className="nav-link">
+          <Link href="/" className="nav-link">
             About Me
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/projects" className="nav-link">
+          <Link href="/" className="nav-link">
             Projects
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/contact" className="nav-link">
+          <Link href="/" className="nav-link">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
