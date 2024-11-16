@@ -1,3 +1,6 @@
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -20,10 +23,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="antialiased bg-background flex flex-col min-h-screen">
+        {/* Navigation Bar */}
+        <Navbar />
+
+        {/* Content */}
+        <main className="flex-grow">{children}</main>
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   );
