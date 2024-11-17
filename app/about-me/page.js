@@ -47,7 +47,7 @@ export default function AboutMePage() {
           {separatorBits.map((bit, index) => (
             <motion.span
               key={index}
-              className="text-gray-400 text-xs lg:[writing-mode:vertical-lr]"
+              className="text-gray-500 text-xs lg:[writing-mode:vertical-lr]"
               animate={{
                 opacity: Math.random(),
               }}
@@ -64,23 +64,52 @@ export default function AboutMePage() {
       </div>
 
       {/* Story */}
-      <div className="w-80">
-        <h1 className="text-2xl font-bold">A Bit about Me</h1>
-        <p className="text-sm text-gray-600 mt-1">
-          I'm a graduate of the Computer Science at Parahyangan Catholic
-          University, and I am currently a{" "}
+      <div className="mx-5 w-4/6 lg:w-2/6">
+        {/* Title */}
+        <h1 className="text-3xl lg:text-4xl font-bold">
+          A Bit about{" "}
+          <span className="bg-primary text-white px-2 mr-2 rounded-md">Me</span>
+        </h1>
+
+        {/* Background */}
+        <p className="text-sm lg:text-base text-gray-600 mt-2">
+          A graduate of the Computer Science from Parahyangan Catholic
+          University with a deep passion for{" "}
           <span className="text-primary font-bold underline">
-            full-stack web developer
+            front-end development
+          </span>{" "}
+          and{" "}
+          <span className="text-primary font-bold underline">
+            clean code architecture
+          </span>
+          . Currently employed as a{" "}
+          <span className="text-primary font-bold underline">
+            full-stack web
           </span>{" "}
           and{" "}
           <span className="text-primary font-bold underline">
             mobile developer
           </span>
-          . I primarily work on developing new features, building APIs,
-          optimizing databases, and resolving application issues.
+          , designing and building business application solutions for clients.
         </p>
 
-        <div></div>
+        {/* CV */}
+        <motion.div
+          initial={{ x: "-10%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+          className="mt-3"
+        >
+          <a
+            href="/documents/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Curriculum Vitae in a new tab"
+            className="text-primary text-lg font-bold cursor-pointer"
+          >
+            Curriculum Vitae
+          </a>
+        </motion.div>
       </div>
     </div>
   );
