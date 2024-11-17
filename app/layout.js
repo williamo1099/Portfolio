@@ -23,6 +23,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>William Oktavianus</title>
+        <meta
+          name="description"
+          content="This is William Oktavianus portfolio app."
+        />
+      </head>
+
       <body className="antialiased bg-background text-foreground flex flex-col min-h-screen">
         {/* Navigation Bar */}
         <Navbar />
