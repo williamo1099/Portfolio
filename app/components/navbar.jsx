@@ -32,7 +32,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/" className="nav-link">
+          <Link href="/about-me" className="nav-link">
             About Me
           </Link>
         </li>
