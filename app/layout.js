@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         />
       </head>
 
-      <body className="antialiased bg-background text-foreground flex flex-col min-h-screen">
+      <body className="m-0 p-0 h-screen w-screen overflow-hidden bg-gray-100">
         {/* Navigation Bar */}
         <Navbar />
 
