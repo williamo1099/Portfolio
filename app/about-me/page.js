@@ -119,10 +119,14 @@ export default function AboutMePage() {
       </div>
 
       <div className="flex flex-row space-x-4 items-center justify-center w-full">
-        <TraitCircle text="Clean Code" color="primary" />
-        <TraitCircle text="Detail Focused" color="primary" />
-        <TraitCircle text="Team Work" color="primary" />
-        <TraitCircle text="Tech- Driven" color="primary" />
+        <TraitCircle
+          text="Clean Code"
+          href="/about-me/clean-code"
+          color="primary"
+        />
+        <TraitCircle text="Detail Focused" href="/" color="primary" />
+        <TraitCircle text="Team Work" href="/" color="primary" />
+        <TraitCircle text="Tech- Driven" href="/" color="primary" />
       </div>
     </div>
   );
