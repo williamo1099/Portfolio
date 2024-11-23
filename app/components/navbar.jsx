@@ -61,7 +61,12 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/" className="nav-link">
+          <Link
+            href="/contact"
+            className={`nav-link ${
+              isActive("/contact") ? "nav-link-active" : ""
+            }`}
+          >
             Contact
           </Link>
         </li>

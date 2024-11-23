@@ -27,3 +27,7 @@ body {
 .nav-link-active {
   @apply px-4 py-2 bg-primary text-white font-bold rounded-md border-none hover:border-none hover:text-white;
 }
+
+.form-input {
+  @apply appearance-none rounded-none border-b-2 border-foreground bg-background w-full p-2 mt-1 focus:outline-none focus:rounded focus:border-b-4 focus:border-2 focus:border-primary;
+}
