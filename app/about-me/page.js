@@ -1,8 +1,30 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { traits } from "@/data/traits";
 
-import TraitCircle from "./trait-circle";
+const TraitCircle = ({ trait, href, color }) => {
+  const words = trait.title.split(" ");
+  const delay = (Math.random() * 2 + 1).toFixed(2);
+
+  return (
+    <motion.div
+      className={`flex items-center justify-center w-20 h-20 bg-${color} text-white rounded-full shadow-lg cursor-pointer hover:scale-105 transform transition-transform duration-300`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        delay: delay,
+        type: "spring",
+      }}
+    >
+      <span className="text-base text-center font-bold">
+        {words[0]}
+        <br />
+        {words[1]}
+      </span>
+    </motion.div>
+  );
+};
 
 export default function AboutMePage() {
   const separatorBits = "011100100110010101101001".split("");
@@ -21,7 +43,7 @@ export default function AboutMePage() {
             animate={{ x: 0, opacity: 1 }}
             transition={{
               duration: 1,
-              ease: "easeOut",
+              ease: "easeInOut",
             }}
           ></motion.div>
 
@@ -70,10 +92,7 @@ export default function AboutMePage() {
         <div className="mx-5 w-4/6 lg:w-2/6">
           {/* Title */}
           <h1 className="text-3xl lg:text-4xl font-bold">
-            A Bit about{" "}
-            <span className="bg-primary text-white px-2 mr-2 rounded-md">
-              Me
-            </span>
+            A Bit about <span className="text-highlight">Me</span>
           </h1>
 
           {/* Background */}
@@ -102,7 +121,7 @@ export default function AboutMePage() {
           <motion.div
             initial={{ x: "-10%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 1.5, ease: "easeInOut" }}
             className="mt-3"
           >
             <a
@@ -119,14 +138,9 @@ export default function AboutMePage() {
       </div>
 
       <div className="flex flex-row space-x-4 items-center justify-center w-full">
-        <TraitCircle
-          text="Clean Code"
-          href="/about-me/clean-code"
-          color="primary"
-        />
-        <TraitCircle text="Detail Focused" href="/" color="primary" />
-        <TraitCircle text="Team Work" href="/" color="primary" />
-        <TraitCircle text="Tech- Driven" href="/" color="primary" />
+        {traits.map((trait, index) => (
+          <TraitCircle key={index} trait={trait} href="/" color="primary" />
+        ))}
       </div>
     </div>
   );

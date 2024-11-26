@@ -52,9 +52,7 @@ export default function HomePage() {
 
           {/* Artist */}
           <div className="space-x-2">
-            <span className="bg-primary text-white font-serif px-2 mr-2 rounded-md">
-              Artist
-            </span>
+            <span className="text-highlight font-serif mr-2">Artist</span>
             and
           </div>
 

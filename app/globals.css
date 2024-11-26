@@ -31,3 +31,7 @@ body {
 .form-input {
   @apply appearance-none rounded-none border-b-2 border-foreground bg-background w-full p-2 mt-1 focus:outline-none focus:rounded focus:border-b-4 focus:border-2 focus:border-primary;
 }
+
+.text-highlight {
+  @apply bg-primary text-white px-2 rounded-md;
+}

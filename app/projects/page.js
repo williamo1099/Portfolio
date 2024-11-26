@@ -10,7 +10,7 @@ const ProjectCard = ({ project, index }) => (
     key={index}
     initial={{ y: "-10%", opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
-    transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
+    transition={{ duration: 1, delay: index * 0.2, ease: "easeInOut" }}
     className="bg-white p-4 rounded-lg shadow-lg hover:scale-105 flex flex-col justify-between"
   >
     {/* Image */}
@@ -51,9 +51,7 @@ export default function ProjectsPage() {
     <div className="flex flex-col justify-center items-center min-h-screen">
       {/* Title */}
       <h1 className="text-3xl lg:text-4xl font-bold">
-        Some of{" "}
-        <span className="bg-primary text-white px-2 rounded-md">My</span>{" "}
-        Projects
+        Some of <span className="text-highlight">My</span> Projects
       </h1>
 
       {/* Selection */}

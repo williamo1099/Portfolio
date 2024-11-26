@@ -62,13 +62,17 @@ export default function ContactPage() {
       <form onSubmit={handleSubmit} className="flex flex-col w-5/6 lg:w-1/2">
         {/* Title */}
         <h2 className="text-3xl lg:text-4xl font-bold">
-          Contact{" "}
-          <span className="bg-primary text-white px-2 mr-2 rounded-md">Me</span>
+          Contact <span className="text-highlight">Me</span>
         </h2>
 
         {/* Name */}
-        <div className="mt-5">
-          <label className="font-semibold">Name</label>
+        <motion.div
+          initial={{ x: "-5%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0, ease: "easeInOut" }}
+          className="mt-5"
+        >
+          <label className="font-semibold p-2">Name</label>
           <input
             className="form-input"
             type="text"
@@ -78,11 +82,16 @@ export default function ContactPage() {
             onChange={handleChange}
             required
           />
-        </div>
+        </motion.div>
 
         {/* Email */}
-        <div className="mt-3">
-          <label className="font-semibold">E-mail</label>
+        <motion.div
+          initial={{ x: "-5%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
+          className="mt-3"
+        >
+          <label className="font-semibold p-2">E-mail</label>
           <input
             className="form-input"
             type="email"
@@ -92,11 +101,16 @@ export default function ContactPage() {
             onChange={handleChange}
             required
           />
-        </div>
+        </motion.div>
 
         {/* Message */}
-        <div className="mt-3">
-          <label className="font-semibold">Message</label>
+        <motion.div
+          initial={{ x: "-5%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.4, ease: "easeInOut" }}
+          className="mt-3"
+        >
+          <label className="font-semibold p-2">Message</label>
           <textarea
             className="form-input"
             name="message"
@@ -105,7 +119,7 @@ export default function ContactPage() {
             onChange={handleChange}
             required
           />
-        </div>
+        </motion.div>
 
         {/* Send */}
         <button
