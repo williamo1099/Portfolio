@@ -11,24 +11,36 @@ const ProjectCard = ({ project, index }) => (
     initial={{ y: "-10%", opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
     transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
-    className="bg-white p-4 rounded-lg shadow-lg"
+    className="bg-white p-4 rounded-lg shadow-lg hover:scale-105 flex flex-col justify-between"
   >
     {/* Image */}
-    <div className="w-full h-48 relative mb-4">
+    <div className="w-full h-24 lg:h-48 relative mb-4">
       <Image
+        className="rounded"
         src={project.image}
         alt={project.title}
         layout="fill"
         objectFit="cover"
-        className="rounded-md"
       />
     </div>
 
     {/* Title */}
-    <h3 className="text-xl font-semibold text-gray-800">{project.title}</h3>
+    <h3 className="text-base lg:text-xl font-semibold text-gray-800 mb-3 h-12 flex items-center justify-center">
+      {project.title}
+    </h3>
 
     {/* Description */}
-    <p className="text-gray-600 mt-2">{project.description}</p>
+    <p className="text-sm lg:text-base text-gray-600 mb-2 lg:mb-4 flex-grow">
+      {project.description}
+    </p>
+
+    {/* See More */}
+    <a
+      href={project.link}
+      className="text-sm lg:text-base text-primary hover:underline mt-auto"
+    >
+      See more
+    </a>
   </motion.div>
 );
 
@@ -40,7 +52,7 @@ export default function ProjectsPage() {
       {/* Title */}
       <h1 className="text-3xl lg:text-4xl font-bold">
         Some of{" "}
-        <span className="bg-primary text-white px-2 mr-2 rounded-md">My</span>{" "}
+        <span className="bg-primary text-white px-2 rounded-md">My</span>{" "}
         Projects
       </h1>
 
