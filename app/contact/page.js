@@ -1,5 +1,3 @@
-"use client";
-
 import Title from "../components/title";
 import HighlightedText from "../components/highlighted-text";
 import ContactForm from "./components/contact-form";

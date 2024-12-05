@@ -1,6 +1,3 @@
-"use client";
-import React from "react";
-
 export default function ContactFormMessage({ success, failed }) {
   return (
     <div className="mt-3 text-sm font-medium">

@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <TriangleBackground />
 
         {/* Content */}
-        <main className="flex-grow">
+        <main className="flex-grow z-10 relative">
           {children}
           <ThemeToggle />
         </main>
