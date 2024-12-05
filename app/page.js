@@ -23,11 +23,6 @@ export default function HomePage() {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-      <div className="absolute inset-0 flex justify-center items-center">
-        <div className="w-96 h-96 bg-blue-300 rounded-full absolute -top-10 -left-20 opacity-50"></div>
-        <div className="w-72 h-72 bg-green-300 rounded-full absolute bottom-20 lg:bottom-0 lg:top-20 right-0 lg:right-10 opacity-50"></div>
-      </div>
-
       {/* Foreground Text */}
       <div className="relative z-10 m-5 lg:m-0 text-left">
         {/* Name */}
