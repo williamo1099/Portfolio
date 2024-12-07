@@ -13,7 +13,7 @@ export default function AboutMeStory() {
       </Title>
 
       {/* Background */}
-      <p className="text-sm lg:text-base text-gray-600 mt-2">
+      <p className="text-sm lg:text-base mt-2">
         A graduate of the Computer Science from Parahyangan Catholic University
         with a deep passion for{" "}
         <span className="text-primary font-bold underline">

@@ -7,7 +7,7 @@ export default function ProjectSelector({
   isShowingPersonal,
 }) {
   return (
-    <div className="relative flex flex-row bg-white w-4/6 lg:w-2/6 rounded-full p-0 mt-5">
+    <div className="relative flex flex-row bg-background-light dark:bg-background-dark w-4/6 lg:w-2/6 rounded-full p-0 mt-5">
       {/* Sliding background */}
       <motion.div
         className="absolute bg-primary rounded-full h-full w-1/2 transition-all duration-200"
@@ -19,7 +19,9 @@ export default function ProjectSelector({
       <div
         onClick={showProfessional}
         className={`cursor-pointer text-center font-bold w-1/2 py-2 rounded-full z-10 ${
-          !isShowingPersonal ? "text-white" : "text-black"
+          !isShowingPersonal
+            ? "text-white"
+            : "text-foreground-light dark:text-foreground-dark"
         } transition-all duration-300`}
       >
         Professional
@@ -29,7 +31,9 @@ export default function ProjectSelector({
       <div
         onClick={showPersonal}
         className={`cursor-pointer text-center font-bold w-1/2 py-2 rounded-full z-10 ${
-          isShowingPersonal ? "text-white" : "text-black"
+          isShowingPersonal
+            ? "text-white"
+            : "text-foreground-light dark:text-foreground-dark"
         } transition-all duration-300`}
       >
         Personal

@@ -19,19 +19,3 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.nav-link {
-  @apply px-2 py-1 border-b-2 border-transparent text-foreground hover:border-primary hover:text-primary transition duration-300;
-}
-
-.nav-link-active {
-  @apply px-4 py-2 bg-primary text-white font-bold rounded-md border-none hover:border-none hover:text-white;
-}
-
-.form-input {
-  @apply appearance-none rounded-none border-b-2 border-foreground bg-background w-full p-2 mt-1 focus:outline-none focus:rounded focus:border-b-4 focus:border-2 focus:border-primary;
-}
-
-.text-highlight {
-  @apply bg-primary text-white px-2 rounded-md;
-}

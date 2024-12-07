@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content="My portfolio app." />
       </head>
 
-      <body className="m-0 p-0 h-screen w-screen overflow-hidden bg-gray-100">
+      <body className="bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark h-screen w-screen overflow-hidden m-0 p-0">
         {/* Modal */}
         <div id="modal-root"></div>
 

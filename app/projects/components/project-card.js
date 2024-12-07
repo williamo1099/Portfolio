@@ -9,7 +9,7 @@ export default function ProjectCard({ project, index }) {
       initial={{ y: "-10%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: index * 0.2, ease: "easeInOut" }}
-      className="bg-white p-4 rounded-lg shadow-lg hover:scale-105 flex flex-col justify-between h-auto"
+      className="flex flex-col justify-between rounded-lg shadow-xl bg-background-light dark:bg-background-dark dark:border-2 dark:border-primary h-auto p-4"
     >
       {/* Image */}
       <div className="w-full h-24 lg:h-48 relative mb-4">
@@ -23,12 +23,12 @@ export default function ProjectCard({ project, index }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-base lg:text-xl font-semibold text-gray-800 mb-2 flex items-start justify-start truncate w-full">
+      <h3 className="text-base lg:text-xl font-semibold mb-2 flex items-start justify-start truncate w-full">
         {project.title}
       </h3>
 
       {/* Description */}
-      <div className="text-sm lg:text-base text-gray-600 flex-grow">
+      <div className="text-sm lg:text-base flex-grow">
         {project.description}
       </div>
     </motion.div>
