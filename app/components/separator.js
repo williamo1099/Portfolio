@@ -14,7 +14,9 @@ export default function Separator({
         {separatorBits.split("").map((bit, index) => (
           <motion.span
             key={index}
-            className={`text-gray-500 text-xs ${isVertical ? "lg:[writing-mode:vertical-lr]" : ""}`}
+            className={`text-xs ${
+              isVertical ? "lg:[writing-mode:vertical-lr]" : ""
+            }`}
             animate={{
               opacity: Math.random(),
             }}
