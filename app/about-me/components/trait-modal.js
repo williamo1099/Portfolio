@@ -1,20 +1,29 @@
+import { useEffect } from "react";
+import ReactDOM from "react-dom";
 import Image from "next/image";
+
 import TraitQuote from "./trait-quote";
 import Separator from "@/app/components/separator";
 
 export default function TraitModal({ trait, isModalOpen, onClose }) {
   if (!isModalOpen) return null;
 
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-0">
+  return ReactDOM.createPortal(
+    <div
+      className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-0 transition-opacity duration-300 ease-in-out ${isModalOpen ? "opacity-100" : "opacity-0"}`}
+      onClick={onClose}
+    >
       <div className="bg-white rounded-lg shadow-lg max-w-[90vw] lg:max-w-2xl max-h-[70vh] lg:max-h-fit overflow-y-auto w-full">
         {/* Modal Header */}
-        <div className="sticky flex flex-row justify-between top-0 bg-white z-10 border-b p-3">
+        <div className="sticky flex flex-row justify-between top-0 bg-white z-10 border-b py-3 px-5">
           {/* Title */}
           <h3 className="text-xl font-bold">{trait.title}</h3>
 
           {/* Close */}
-          <button onClick={onClose} className="relative w-8 h-8">
+          <button
+            onClick={onClose}
+            className="relative w-8 h-8 hover:scale-110 transform transition-transform duration-300"
+          >
             <Image src="/icons/close.svg" alt="Close Icon" layout="fill" />
           </button>
         </div>
@@ -33,6 +42,7 @@ export default function TraitModal({ trait, isModalOpen, onClose }) {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById("modal-root"),
   );
 }

@@ -16,7 +16,15 @@ export default function TraitQuote({ quote }) {
 
         {/* Credit */}
         <p className="font-bold">
-          ~<span className="text-primary hover:underline">{quote.author}</span>
+          ~
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={quote.authorLink}
+            className="text-primary hover:underline"
+          >
+            {quote.author}
+          </a>
         </p>
       </div>
     </div>
