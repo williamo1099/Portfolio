@@ -1,9 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+import SocialMediaList from "./components/social-media-list";
 
 export default function HomePage() {
-  //
   const fullName = "Wiilliam Oktavianus";
   const [displayedText, setDisplayedText] = useState("");
 
@@ -56,33 +57,7 @@ export default function HomePage() {
         </div>
 
         {/* Social Media */}
-        <div className="flex space-x-2 mt-6">
-          {/* GitHub */}
-          <a
-            href="https://github.com/williamo1099"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
-              alt="GitHub"
-              className="rounded-lg hover:opacity-75"
-            />
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/williamo1099/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"
-              alt="GitHub"
-              className="rounded-lg hover:opacity-75"
-            />
-          </a>
-        </div>
+        <SocialMediaList />
       </div>
     </div>
   );
