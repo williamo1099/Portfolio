@@ -1,14 +1,15 @@
 import Image from "next/image";
 import TraitQuote from "./trait-quote";
+import Separator from "@/app/components/separator";
 
 export default function TraitModal({ trait, isModalOpen, onClose }) {
   if (!isModalOpen) return null;
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-0">
-      <div className="bg-white rounded-lg shadow-lg max-w-sm lg:max-w-2xl w-full p-6">
+      <div className="bg-white rounded-lg shadow-lg max-w-[90vw] lg:max-w-2xl max-h-[70vh] lg:max-h-fit overflow-y-auto w-full">
         {/* Modal Header */}
-        <div className="flex justify-between items-center border-b pb-3">
+        <div className="sticky flex flex-row justify-between top-0 bg-white z-10 border-b p-3">
           {/* Title */}
           <h3 className="text-xl font-bold">{trait.title}</h3>
 
@@ -19,11 +20,15 @@ export default function TraitModal({ trait, isModalOpen, onClose }) {
         </div>
 
         {/* Modal Body */}
-        <div className="mt-4">
+        <div className="py-3 px-5">
           {/* Quote */}
           <TraitQuote quote={trait.quote} />
 
-          <div className="overflow-auto max-h-[60vh] w-full mt-4">
+          {/* Separator */}
+          <Separator additionalClassNames="my-5" />
+
+          {/* Paragraph */}
+          <div className="text-sm lg:text-base w-full mb-5">
             {trait.description}
           </div>
         </div>

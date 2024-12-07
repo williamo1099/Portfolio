@@ -71,6 +71,10 @@ export const traits = [
         </p>
       </>
     ),
+    quote: {
+      text: "It has long been an axiom of mine that the little things are infinitely the most important.",
+      author: "Sherlock Holmes",
+    },
   },
 
   // Team Work
@@ -106,11 +110,15 @@ export const traits = [
         </p>
       </>
     ),
+    quote: {
+      text: "It has long been an axiom of mine that the little things are infinitely the most important.",
+      author: "Sherlock Holmes",
+    },
   },
 
   // Tech-Driven
   {
-    title: "Tech- Driven",
+    title: "Tech-Driven",
     description: (
       <>
         <p className="text-center">
@@ -141,5 +149,9 @@ export const traits = [
         </p>
       </>
     ),
+    quote: {
+      text: "Technology is a tool, and it's critical to the future of work. It makes people more productive, more creative, and makes businesses more efficient.",
+      author: "Sundar Pichai",
+    },
   },
 ];
