@@ -11,12 +11,14 @@ export default function ProjectGrid() {
 
   return (
     <React.Fragment>
+      {/* Selector */}
       <ProjectSelector
         showPersonal={() => setShowPersonal(true)}
         showProfessional={() => setShowPersonal(false)}
         isShowingPersonal={showPersonal}
       />
 
+      {/* Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 overflow-auto max-h-[60vh] sm:h-[70vh] w-full px-5 mt-8">
         {(showPersonal ? personalProjects : professionalProjects).map(
           (project, index) => (
