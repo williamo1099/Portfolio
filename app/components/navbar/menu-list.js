@@ -10,18 +10,36 @@ export default function MenuList({ isMenuOpen }) {
 
   return (
     <ul
-      className={`lg:flex lg:flex-row flex-col lg:space-x-6 space-y-4 lg:space-y-0 ${
-        isMenuOpen
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-5 pointer-events-none"
-      } lg:opacity-100 lg:translate-y-0 lg:pointer-events-auto
-    absolute lg:static left-0 w-full bg-background rounded-lg text-foreground lg:bg-transparent z-40 justify-center pt-52 pl-14 p-4 lg:p-0 transition-all duration-300 ease-in-out`}
+      className={`
+        // Layout
+        absolute lg:static flex flex-col lg:flex-row
+        top-0 left-0 z-40 w-screen h-screen lg:h-fit
+
+        // Spacing
+        justify-center items-center
+        space-y-6 lg:space-y-0 lg:space-x-6
+
+        // Typography
+        text-lg lg:text-base font-medium text-center lg:text-left
+
+        // Background & Appearance
+        bg-background-light dark:bg-background-dark lg:bg-transparent lg:dark:bg-transparent rounded-lg
+
+        // Visibility & Animation
+        ${isMenuOpen ? "opacity-95 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"}
+        lg:opacity-100 lg:translate-y-0 lg:pointer-events-auto
+
+        // Transition
+        transition-all duration-300 ease-in-out
+      `}
     >
       {menus.map((menu, index) => (
         <MenuItem
           link={menu.link}
           title={menu.name}
+          index={index}
           isActive={isActive(menu.link)}
+          isMenuOpen={isMenuOpen}
           key={index}
         />
       ))}

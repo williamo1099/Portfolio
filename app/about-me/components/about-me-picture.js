@@ -32,7 +32,7 @@ export default function AboutMePicture() {
           alt="Profile Picture"
           width={400}
           height={400}
-          className="relative z-10 -translate-y-[32px] lg:-translate-y-[54px] rounded-full"
+          className="relative z-10 -translate-y-[32px] lg:-translate-y-[53px] rounded-full"
         />
       </motion.div>
     </div>
