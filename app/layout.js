@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
               className="
                 // Layout
                 flex flex-col justify-center items-center
-                h-[calc(100vh-3rem)]
+                h-[calc(100dvh-3rem)]
 
                 // Overflow & Spacing
                 overflow-auto
