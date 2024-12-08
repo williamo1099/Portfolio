@@ -1,3 +1,5 @@
+import { ThemeProvider } from "next-themes";
+
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import ThemeToggle from "./components/theme-toggle";
@@ -20,22 +22,38 @@ export default function RootLayout({ children }) {
         <meta name="description" content="My portfolio app." />
       </head>
 
-      <body className="bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark h-screen w-screen overflow-hidden m-0 p-0">
-        {/* Modal */}
-        <div id="modal-root"></div>
+      <body
+        className={`
+          // Layout
+          h-screen w-screen
 
-        {/* Navigation Bar */}
-        <Navbar />
-        <TriangleBackground />
+          // Overflow & Spacing
+          overflow-hidden m-0 p-0
 
-        {/* Content */}
-        <main className="flex-grow z-10 relative">
-          {children}
-          <ThemeToggle />
-        </main>
+          // Typography
+          text-foreground-light dark:text-foreground-dark
 
-        {/* Footer */}
-        <Footer />
+          // Background
+          bg-background-light dark:bg-background-dark
+        `}
+      >
+        <ThemeProvider attribute="class" enableSystem={true}>
+          {/* Modal */}
+          <div id="modal-root"></div>
+
+          {/* Navigation Bar */}
+          <Navbar />
+          <TriangleBackground />
+
+          {/* Content */}
+          <main className="flex-grow z-10 relative">
+            {children}
+            <ThemeToggle />
+          </main>
+
+          {/* Footer */}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
