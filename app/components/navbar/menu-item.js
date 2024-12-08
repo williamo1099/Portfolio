@@ -8,7 +8,7 @@ export default function MenuItem({ link, title, index, isActive, isMenuOpen }) {
       initial={{ x: "100%", opacity: 0 }} // Start off-screen
       animate={isMenuOpen ? { x: 0, opacity: 1 } : { x: "100%", opacity: 0 }}
       transition={{
-        duration: 1,
+        duration: 0.5,
         delay: index * 0.2,
         ease: "easeInOut",
       }}
@@ -16,11 +16,35 @@ export default function MenuItem({ link, title, index, isActive, isMenuOpen }) {
     >
       <Link
         href={link}
-        className={`px-2 py-1 border-b-2 border-transparent text-foreground hover:border-primary hover:text-primary transition duration-300 ${
-          isActive
-            ? "px-4 py-2 bg-primary text-white font-bold rounded-md border-none hover:border-none hover:text-white"
-            : ""
-        }`}
+        className={`
+          // Spacing
+          border-b-2 border-transparent px-2 py-1
+
+          // Typography
+          hover:text-primary
+
+          // Borders
+          hover:border-primary
+
+          // Transitions
+          transition duration-300
+
+          // Active State
+          ${
+            isActive
+              ? `
+                // Active Spacing
+                px-4 py-2
+
+                // Active Appearance
+                bg-primary text-white font-bold rounded-md
+
+                // Active Borders
+                border-none hover:border-none hover:text-white
+              `
+              : ""
+          }
+        `}
       >
         {title}
       </Link>
