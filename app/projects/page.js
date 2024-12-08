@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <>
       {/* Title */}
       <Title>
         Some of <HighlightedText>My</HighlightedText> Projects
@@ -16,6 +16,6 @@ export default function ProjectsPage() {
 
       {/* Projects Grid */}
       <ProjectGrid />
-    </div>
+    </>
   );
 }

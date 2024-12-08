@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function AboutMePage() {
   return (
-    <div className="flex flex-col space-y-2 justify-center items-center min-h-screen">
-      <div className="flex flex-col lg:flex-row justify-center items-center">
+    <>
+      <div className="flex flex-col lg:flex-row justify-center items-center mb-5">
         {/* Picture */}
         <AboutMePicture />
 
@@ -23,6 +23,6 @@ export default function AboutMePage() {
 
       {/* List of Traits */}
       <TraitList />
-    </div>
+    </>
   );
 }

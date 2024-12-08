@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <>
       {/* Foreground Text */}
       <div className="relative z-10 m-5 lg:m-0 text-left">
         <Introduction />
@@ -15,6 +15,6 @@ export default function HomePage() {
         {/* Social Media */}
         <SocialMediaList />
       </div>
-    </div>
+    </>
   );
 }

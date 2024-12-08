@@ -41,8 +41,22 @@ export default function RootLayout({ children }) {
           <TriangleBackground />
 
           {/* Content */}
-          <main className="flex-grow z-10 relative">
-            {children}
+          <main className="z-10 relative">
+            <div
+              className="
+                // Layout
+                flex flex-col justify-center items-center
+                h-[calc(100vh-3rem)]
+
+                // Overflow & Spacing
+                overflow-auto
+                pt-20 lg:pt-0
+                pb-10 lg:pb-0
+              "
+            >
+              {children}
+            </div>
+
             <ThemeToggle />
           </main>
 

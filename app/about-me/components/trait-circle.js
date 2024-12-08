@@ -13,7 +13,7 @@ export default function TraitCircle({ trait }) {
   return (
     <React.Fragment>
       <motion.div
-        className={`flex items-center justify-center w-20 h-20 bg-primary text-white rounded-full shadow-lg cursor-pointer hover:scale-105 transform transition-transform duration-300`}
+        className={`flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-primary rounded-full shadow-lg cursor-pointer hover:scale-105 transform transition-transform duration-300`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -22,7 +22,7 @@ export default function TraitCircle({ trait }) {
         }}
         onTap={() => setIsModalOpen(true)}
       >
-        <span className="text-base text-center font-bold">
+        <span className="text-sm lg:text-base text-center text-foreground-dark font-bold">
           {words[0]}
           <br />
           {words[1]}

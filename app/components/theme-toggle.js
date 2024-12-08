@@ -26,7 +26,7 @@ export default function ThemeToggle() {
         p-3
 
         // Background & Appearance
-        bg-primary rounded-full
+        bg-accent rounded-full
         shadow-lg
 
         // Typography

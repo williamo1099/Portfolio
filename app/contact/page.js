@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen">
+    <>
       {/* Title */}
       <Title>
         Contact <HighlightedText>Me</HighlightedText>
@@ -16,6 +16,6 @@ export default function ContactPage() {
 
       {/* Form */}
       <ContactForm />
-    </div>
+    </>
   );
 }
