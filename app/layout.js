@@ -1,4 +1,5 @@
-import { ThemeProvider } from "next-themes";
+"use client";
+import dynamic from "next/dynamic";
 
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
@@ -7,21 +8,15 @@ import TriangleBackground from "./components/triangle-background";
 
 import "./globals.css";
 
-export const metadata = {
-  title: "William Oktavianus",
-  description: "My portfolio.",
-};
+// ThemeProvider with SSR disabled.
+const ThemeProvider = dynamic(
+  () => import("next-themes").then((mod) => mod.ThemeProvider),
+  { ssr: false },
+);
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>William Oktavianus</title>
-        <meta name="description" content="My portfolio app." />
-      </head>
-
       <body
         className={`
           // Layout

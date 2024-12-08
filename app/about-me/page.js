@@ -1,9 +1,11 @@
-"use client";
-
 import AboutMePicture from "./components/about-me-picture";
 import AboutMeStory from "./components/about-me-story";
 import TraitList from "./components/trait-list";
 import Separator from "../components/separator";
+
+export const metadata = {
+  title: "William Oktavianus | About Me",
+};
 
 export default function AboutMePage() {
   return (

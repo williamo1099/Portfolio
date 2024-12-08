@@ -1,5 +1,9 @@
-import Introduction from "./components/introduction";
-import SocialMediaList from "./components/social-media-list";
+import Introduction from "./home/components/introduction";
+import SocialMediaList from "./home/components/social-media-list";
+
+export const metadata = {
+  title: "William Oktavianus",
+};
 
 export default function HomePage() {
   return (

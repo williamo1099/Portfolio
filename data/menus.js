@@ -1,5 +1,5 @@
 export const menus = [
-  { name: "Home", link: "/home" },
+  { name: "Home", link: "/" },
   { name: "About Me", link: "/about-me" },
   { name: "Projects", link: "/projects" },
   { name: "Contact", link: "/contact" },
