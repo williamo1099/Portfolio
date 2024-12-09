@@ -38,13 +38,11 @@ export default function ThemeToggle() {
       transition={{ type: "linear" }}
     >
       {/* Text */}
-      <AnimatePresence>
-        {isHovered && (
-          <span className="mr-4 truncate opacity-0 lg:opacity-100">
-            Switch Theme
-          </span>
-        )}
-      </AnimatePresence>
+      <div className="hidden lg:block">
+        <AnimatePresence>
+          {isHovered && <span className="mr-4 truncate">Switch Theme</span>}
+        </AnimatePresence>
+      </div>
 
       {/* Icon */}
       <div className="relative w-8 h-8">
