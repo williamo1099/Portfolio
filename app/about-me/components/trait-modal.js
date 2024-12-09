@@ -17,7 +17,7 @@ export default function TraitModal({ trait, isModalOpen, onClose }) {
     >
       <div className="bg-background-light dark:bg-background-dark rounded-lg shadow-lg max-w-[90vw] lg:max-w-2xl max-h-[70vh] lg:max-h-fit overflow-y-auto w-full">
         {/* Modal Header */}
-        <div className="sticky flex flex-row justify-between top-0 z-10 border-b py-3 px-5">
+        <div className="bg-background-light dark:bg-background-dark sticky flex flex-row justify-between top-0 z-10 border-b py-3 px-5">
           {/* Title */}
           <h3 className="text-xl font-bold">{trait.title}</h3>
 
@@ -45,6 +45,6 @@ export default function TraitModal({ trait, isModalOpen, onClose }) {
         </div>
       </div>
     </div>,
-    document.getElementById("modal-root")
+    document.getElementById("modal-root"),
   );
 }
