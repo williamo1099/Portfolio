@@ -39,7 +39,11 @@ export default function ThemeToggle() {
     >
       {/* Text */}
       <AnimatePresence>
-        {isHovered && <span className="mr-4 truncate">Switch Theme</span>}
+        {isHovered && (
+          <span className="mr-4 truncate opacity-0 lg:opacity-100">
+            Switch Theme
+          </span>
+        )}
       </AnimatePresence>
 
       {/* Icon */}
