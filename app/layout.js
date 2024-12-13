@@ -51,7 +51,6 @@ export default function RootLayout({ children }) {
                 // Overflow & Spacing
                 overflow-auto
                 pt-20 lg:pt-0
-                pb-10 lg:pb-0
               "
             >
               {children}

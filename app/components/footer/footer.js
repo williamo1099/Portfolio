@@ -5,7 +5,7 @@ export default function Footer() {
     <footer
       className="
       // Positioning & Layout
-      sticky bottom-0 w-full h-12 z-50
+      sticky bottom-0 w-full h-12 z-40
 
       // Spacing
       py-4

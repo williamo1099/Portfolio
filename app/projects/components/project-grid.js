@@ -19,7 +19,7 @@ export default function ProjectGrid() {
       />
 
       {/* Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 overflow-auto max-h-[60vh] lg:max-h-[100vh] w-full px-5 mt-8">
+      <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 overflow-auto max-h-[60vh] w-full px-5 mt-8">
         {(showPersonal ? personalProjects : professionalProjects).map(
           (project, index) => (
             <ProjectCard key={index} project={project} index={index} />
