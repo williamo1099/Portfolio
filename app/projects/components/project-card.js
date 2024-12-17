@@ -9,10 +9,10 @@ export default function ProjectCard({ project, index }) {
       initial={{ y: "-10%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, delay: index * 0.2, ease: "easeInOut" }}
-      className="flex flex-col justify-between rounded-lg shadow-xl bg-background-light dark:bg-background-dark dark:border-2 dark:border-primary h-auto p-4"
+      className="flex flex-col justify-between rounded-lg bg-background-light dark:bg-background-dark border-2 border-primary h-fit p-3 mb-4"
     >
       {/* Image */}
-      <div className="w-full h-24 lg:h-48 relative mb-4">
+      <div className="w-full h-24 lg:h-48 relative mb-3">
         <Image
           className="rounded"
           src={project.image}
@@ -23,13 +23,17 @@ export default function ProjectCard({ project, index }) {
       </div>
 
       {/* Title */}
-      <h3 className="text-base lg:text-xl font-semibold mb-2 flex items-start justify-start truncate w-full">
+      <h3 className="text-base lg:text-xl font-semibold mb-2">
         {project.title}
       </h3>
 
-      {/* Description */}
-      <div className="text-sm lg:text-base flex-grow">
-        {project.description}
+      {/* Stacks */}
+      <div className="flex flex-row flex-wrap gap-2">
+        {project.stacks.map((stack, index) => (
+          <span key={index} className="bg-primary text-white px-3 py-0 rounded">
+            {stack}
+          </span>
+        ))}
       </div>
     </motion.div>
   );
