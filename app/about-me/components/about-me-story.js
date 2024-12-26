@@ -16,20 +16,11 @@ export default function AboutMeStory() {
       <p className="text-sm lg:text-base mt-2">
         A graduate of the Computer Science from Parahyangan Catholic University
         with a deep passion for{" "}
-        <span className="text-primary font-bold underline">
-          front-end development
-        </span>{" "}
-        and{" "}
-        <span className="text-primary font-bold underline">
-          clean code architecture
-        </span>
-        . Currently employed as a{" "}
-        <span className="text-primary font-bold underline">full-stack web</span>{" "}
-        and{" "}
-        <span className="text-primary font-bold underline">
-          mobile developer
-        </span>
-        , designing and building business application solutions for clients.
+        <HighlightedText>front-end development</HighlightedText> and{" "}
+        <HighlightedText>clean code architecture</HighlightedText>. Currently
+        employed as a <HighlightedText>full-stack web</HighlightedText> and{" "}
+        <HighlightedText>mobile developer</HighlightedText>, designing and
+        building business application solutions for clients.
       </p>
 
       {/* CV */}
@@ -44,7 +35,7 @@ export default function AboutMeStory() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Curriculum Vitae in a new tab"
-          className="text-primary text-lg font-bold cursor-pointer"
+          className="text-primary text-lg font-bold cursor-pointer hover:underline"
         >
           Curriculum Vitae
         </a>

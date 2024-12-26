@@ -4,12 +4,9 @@ import { motion } from "framer-motion";
 
 export default function AboutMePicture() {
   return (
-    <div className="relative w-48 h-48 lg:w-80 lg:h-80">
+    <div className="relative w-48 h-48 lg:w-72 lg:h-72 mt-10 lg:mt-0 mx-3">
       <motion.div
-        className="absolute z-0 inset-0 rounded-full border-4 border-accent"
-        style={{
-          backgroundImage: `url('/images/blue-sky.jpg')`,
-        }}
+        className="absolute z-0 inset-0 rounded-lg border-4 bg-primary border-accent"
         initial={{ x: "-20%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
@@ -28,11 +25,11 @@ export default function AboutMePicture() {
         }}
       >
         <Image
-          src="/images/me.png"
+          src="/images/profile.png"
           alt="Profile Picture"
           width={400}
           height={400}
-          className="relative z-10 -translate-y-[32px] lg:-translate-y-[53px] rounded-full"
+          className="relative z-10 -translate-y-[6rem] lg:-translate-y-[9rem]"
         />
       </motion.div>
     </div>
