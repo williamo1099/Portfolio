@@ -13,12 +13,16 @@ export default function TraitCircle({ trait }) {
   return (
     <React.Fragment>
       <motion.div
-        className={`flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-primary rounded-full shadow-lg cursor-pointer hover:scale-105 transform transition-transform duration-300`}
+        className={`flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-primary dark:border-2 dark:border-foreground-dark rounded-full shadow-lg cursor-pointer hover:scale-105 transform transition-transform duration-300`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
           delay: delay,
           type: "spring",
+        }}
+        style={{
+          backgroundColor: trait.backgroundColor,
+          color: trait.textColor,
         }}
         onTap={() => setIsModalOpen(true)}
       >

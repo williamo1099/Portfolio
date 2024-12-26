@@ -8,30 +8,22 @@ export const traits = [
     description: (
       <>
         <p className="text-center">
-          To me, writing code is like crafting a story, and each time I write, I
-          strive to make the <span className="italic">story</span> clear and
-          compelling. I follow current{" "}
-          <span className="text-primary font-bold">global standards</span> and{" "}
-          <span className="text-primary font-bold">conventions</span> to ensure
-          cleanliness, consistency, and maintainability in my codebase. By
-          following the principles of{" "}
-          <span className="text-primary font-bold">DRY</span> and{" "}
-          <span className="text-primary font-bold">KISS</span>, I ensure that my
-          code is both efficient and easy to understand. This approach helps not
-          only me, but also my{" "}
-          <span className="text-primary font-bold">collaborators</span>, create
-          high-quality code.
+          Writing code is like crafting a story and everytime I write, I want to
+          make sure that it is easy and interesting to follow. I stick to{" "}
+          <HighlightedText>best practices</HighlightedText> and current{" "}
+          <HighlightedText>coding standards</HighlightedText> to keep things
+          clean, consistent, and maintainable by following principles like DRY
+          and KISS, and by using{" "}
+          <HighlightedText>clean architecture</HighlightedText>.
         </p>
+
         <p className="text-center mt-2">
-          Additionally,{" "}
-          <span className="text-primary font-bold">thorough testing</span> and{" "}
-          <span className="text-primary font-bold">clear documentation</span>{" "}
-          are also essential priorities for me. I perform tests to ensure
-          everything works as intended and when errors occur, I make sure they
-          are properly handled through error-handling mechanisms. Moreover,
-          well-structured documentation further helps collaborators understand
-          the logic and decisions behind the code, improving collaboration and
-          long-term maintainability.
+          On top of that, <HighlightedText>testing</HighlightedText> and{" "}
+          <HighlightedText>good documentation</HighlightedText> are key for me.
+          I always test my code to make sure everything works as expected, and
+          if something breaks, I make sure it’s handled properly. And clear
+          documentation? It’s a must! It helps making collaboration a lot
+          smoother and ensuring the code is easy to maintain in the long run.
         </p>
       </>
     ),
@@ -40,36 +32,21 @@ export const traits = [
       author: "Robert C. Martin",
       authorLink: "https://en.wikipedia.org/wiki/Robert_C._Martin",
     },
+    backgroundColor: "#46466A",
+    textColor: "#FCFDFE",
   },
 
   // Detail Focused
   {
     title: "Detail Focused",
-    description: (
-      <>
-        <p className="text-center">
-          <span className="italic">Details are everywhere</span>, and I love
-          focusing on the ones that tend to be overlooked. I{" "}
-          <HighlightedText>pay attention</HighlightedText> to the specifics to
-          ensure everything works seamlessly as I believe it’s the small, often
-          unnoticed details that that make a product truly alive.
-        </p>
-
-        <p className="text-center mt-2">
-          Being detail-focused also means staying{" "}
-          <HighlightedText>organized</HighlightedText> and{" "}
-          <HighlightedText>thorough</HighlightedText> in everything I do. My{" "}
-          <HighlightedText>perfectionist</HighlightedText> nature always drives
-          me to refine each element, making sure everything aligns perfectly and
-          functions smoothly.
-        </p>
-      </>
-    ),
+    description: <></>,
     quote: {
       text: "It has long been an axiom of mine that the little things are infinitely the most important.",
       author: "Sherlock Holmes",
       authorLink: "https://en.wikipedia.org/wiki/Sherlock_Holmes",
     },
+    backgroundColor: "#E19DAF",
+    textColor: "#FCFDFE",
   },
 
   // Team Work
@@ -77,20 +54,46 @@ export const traits = [
     title: "Team Work",
     description: <></>,
     quote: {
-      text: "It has long been an axiom of mine that the little things are infinitely the most important.",
-      author: "Sherlock Holmes",
-      authorLink: "",
+      text: "Alone we can do so little, together we can do so much.",
+      author: "Helen Keller",
+      authorLink: "https://en.wikipedia.org/wiki/Helen_Keller",
     },
+    backgroundColor: "#29283B",
+    textColor: "#FCFDFE",
   },
 
   // Tech-Driven
   {
     title: "Tech-Driven",
-    description: <></>,
+    description: (
+      <>
+        <p className="text-center">
+          Life is full of challenges, but with the right{" "}
+          <HighlightedText>tools</HighlightedText> and{" "}
+          <HighlightedText>technology</HighlightedText>, solutions are always
+          within reach. I’m the kind of person who loves diving into new apps,
+          gadgets, or systems just to see how they can{" "}
+          <HighlightedText>make things easier</HighlightedText>. Whether it’s
+          automating boring tasks, uncovering clever hacks to save time, or
+          figuring out a tool to make everyone’s life better, I’m all about
+          using tech to get things done.
+        </p>
+
+        <p className="text-center mt-2">
+          In my work, I use a lot of tech to stay organized, improve efficiency,
+          and tackle problems head-on. From the basic tools like Git for version
+          control to AI (which is a big star nowadays) to help automate boring
+          tasks, suggest code revisions and learn new stuffs; I use these kinds
+          of tools every day.
+        </p>
+      </>
+    ),
     quote: {
       text: "Technology is a tool, and it's critical to the future of work. It makes people more productive, more creative, and makes businesses more efficient.",
       author: "Sundar Pichai",
       authorLink: "https://en.wikipedia.org/wiki/Sundar_Pichai",
     },
+    backgroundColor: "#BC3932",
+    textColor: "#FCFDFE",
   },
 ];
