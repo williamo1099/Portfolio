@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           overflow-hidden m-0 p-0
 
           // Typography
-          text-foreground-light dark:text-foreground-dark
+          font-poppins text-foreground-light dark:text-foreground-dark
 
           // Background
           bg-background-light dark:bg-background-dark
