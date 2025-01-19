@@ -8,6 +8,10 @@ export default function MenuList({ isMenuOpen }) {
   const pathname = usePathname();
   const isActive = (path) => pathname === path;
 
+  const filteredMenus = menus.filter(
+    (menu) => menu.link !== "/misc" || pathname === "/misc"
+  );
+
   return (
     <ul
       className={`
@@ -26,14 +30,18 @@ export default function MenuList({ isMenuOpen }) {
         bg-background-light dark:bg-background-dark lg:bg-transparent lg:dark:bg-transparent rounded-lg
 
         // Visibility & Animation
-        ${isMenuOpen ? "opacity-95 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"}
+        ${
+          isMenuOpen
+            ? "opacity-95 translate-y-0"
+            : "opacity-0 -translate-y-5 pointer-events-none"
+        }
         lg:opacity-100 lg:translate-y-0 lg:pointer-events-auto
 
         // Transition
         transition-all duration-300 ease-in-out
       `}
     >
-      {menus.map((menu, index) => (
+      {filteredMenus.map((menu, index) => (
         <MenuItem
           link={menu.link}
           title={menu.name}

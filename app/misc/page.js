@@ -1,10 +1,7 @@
-import Link from "next/link";
-
 import ReiColorPaletteImage from "./components/rei-color-palette-image";
 import HighlightedText from "../components/highlighted-text";
 import Title from "../components/title";
 import Separator from "../components/separator";
-import { color } from "framer-motion";
 
 export default function MiscPage() {
   return (
