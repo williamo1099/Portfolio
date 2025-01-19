@@ -7,7 +7,7 @@ export default function MiscPage() {
   return (
     <>
       <Title>Congratulations!</Title>
-      <h2 className="text-xl mt-2">
+      <h2 className="text-xl mt-2 px-5 lg:px-0">
         You just found <HighlightedText>my</HighlightedText> little secret about
         this portfolio!
       </h2>
@@ -17,7 +17,7 @@ export default function MiscPage() {
       </div>
 
       {/*  */}
-      <div className="text-justify max-h-[80vh] overflow-x-auto px-5 lg:px-0 w-full lg:w-3/5">
+      <div className="text-justify max-h-[60vh] overflow-x-auto px-5 lg:px-0 pb-20 lg:pb-0 w-full lg:w-3/5">
         <p>
           <span className="float-left text-5xl font-bold mr-2">T</span>his
           portfolio website is my <span className="italic">love letter</span> to
@@ -39,19 +39,31 @@ export default function MiscPage() {
           underground—also, {`Rei's`} place of origin. The trait circle also
           represents different characters who, in one way or another, influence{" "}
           {`Rei's`} life:{" "}
-          <span className="font-bold" style={{ color: "#46466A" }}>
+          <span
+            className="font-bold dark:bg-white dark:px-2 dark:rounded"
+            style={{ color: "#46466A" }}
+          >
             Shinji
           </span>
           ,{" "}
-          <span className="font-bold" style={{ color: "#E19DAF" }}>
+          <span
+            className="font-bold dark:bg-white dark:px-2 dark:rounded"
+            style={{ color: "#E19DAF" }}
+          >
             Mari
           </span>
           ,{" "}
-          <span className="font-bold" style={{ color: "#29283B" }}>
+          <span
+            className="font-bold dark:bg-white dark:px-2 dark:rounded"
+            style={{ color: "#29283B" }}
+          >
             Nagisa
           </span>{" "}
           and{" "}
-          <span className="font-bold" style={{ color: "#BC3932" }}>
+          <span
+            className="font-bold dark:bg-white dark:px-2 dark:rounded"
+            style={{ color: "#BC3932" }}
+          >
             Asuka
           </span>
           .
