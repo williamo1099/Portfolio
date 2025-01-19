@@ -1,5 +1,6 @@
-import HighlightedText from "@/app/components/highlighted-text";
 import Link from "next/link";
+
+import HighlightedText from "@/app/components/highlighted-text";
 
 export const traits = [
   // Clean Code
@@ -39,7 +40,28 @@ export const traits = [
   // Detail Focused
   {
     title: "Detail Focused",
-    description: <></>,
+    description: (
+      <>
+        <p className="text-center">
+          Details are everywhere and I love{" "}
+          <HighlightedText>focusing</HighlightedText> on the ones most people
+          miss. I believe those small, often overlooked details are the ones
+          that really bring a product to life. Take this portfolio, for
+          instance—catch all the details?
+        </p>
+
+        <p className="text-center mt-2">
+          <Link
+            href="/misc"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-primary font-bold hover:underline"
+          >
+            Curious?
+          </Link>
+        </p>
+      </>
+    ),
     quote: {
       text: "It has long been an axiom of mine that the little things are infinitely the most important.",
       author: "Sherlock Holmes",

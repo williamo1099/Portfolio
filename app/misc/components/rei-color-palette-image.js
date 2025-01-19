@@ -37,7 +37,7 @@ const colorPoints = [
 
 export default function ReiColorPaletteImage() {
   return (
-    <div className="relative w-[150px] h-[225px] mx-auto">
+    <div className="relative w-[150px] h-[250px] mx-auto">
       <Image
         src="/images/color-palette.png"
         alt="Rei Ayanami"
