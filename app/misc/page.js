@@ -17,7 +17,7 @@ export default function MiscPage() {
       </div>
 
       {/*  */}
-      <div className="text-justify max-h-[60vh] overflow-x-auto px-5 lg:px-0 pb-20 lg:pb-0 w-full lg:w-3/5">
+      <div className="text-justify max-h-[60vh] overflow-x-auto px-5 lg:px-0 pb-20 lg:pb-0 mb-5 w-full lg:w-3/5">
         <p>
           <span className="float-left text-5xl font-bold mr-2">T</span>his
           portfolio website is my <span className="italic">love letter</span> to

@@ -11,7 +11,7 @@ import "./globals.css";
 // ThemeProvider with SSR disabled.
 const ThemeProvider = dynamic(
   () => import("next-themes").then((mod) => mod.ThemeProvider),
-  { ssr: false },
+  { ssr: false }
 );
 
 export default function RootLayout({ children }) {
@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
 
                 // Overflow & Spacing
                 overflow-auto
-                pt-20 lg:pt-0
+                pt-10
               "
             >
               {children}

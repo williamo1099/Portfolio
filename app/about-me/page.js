@@ -10,7 +10,7 @@ export const metadata = {
 export default function AboutMePage() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row justify-center items-center mb-5">
+      <div className="flex flex-col lg:flex-row justify-center items-center mt-28 mb-5">
         {/* Picture */}
         <AboutMePicture />
 
