@@ -12,7 +12,7 @@ export default function ProjectCard({ project, index }) {
       className="flex flex-col justify-between rounded-lg bg-background-light dark:bg-background-dark border-2 border-primary h-fit p-3 mb-4"
     >
       {/* Image */}
-      <div className="w-full h-24 lg:h-48 relative mb-3">
+      <div className="w-full h-24 lg:h-56 relative mb-3">
         <Image
           className="rounded"
           src={project.image}

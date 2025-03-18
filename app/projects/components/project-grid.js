@@ -36,7 +36,7 @@ export default function ProjectGrid() {
           {(showPersonal ? personalProjects : professionalProjects).map(
             (project, index) => (
               <ProjectCard key={index} project={project} index={index} />
-            ),
+            )
           )}
         </Masonry>
       </div>
