@@ -1,21 +1,37 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Masonry from "react-masonry-css";
 
 import ProjectSelector from "./project-selector";
 import ProjectCard from "./project-card";
 
-import { personalProjects, professionalProjects } from "@/data/projects";
+// import { personalProjects, professionalProjects } from "@/data/projects";
+import { fetchProjects } from "@/services/project-service";
 
 export default function ProjectGrid() {
+  const [personalProjects, setPersonalProjects] = useState([]);
+  const [professionalProjects, setProfessionalProjects] = useState([]);
   const [showPersonal, setShowPersonal] = useState(false);
 
-  const breakpointColumnsObj = {
-    default: 5,
-    1100: 3,
-    700: 2,
-    500: 1,
-  };
+  useEffect(() => {
+    // Fetch professional projects.
+    const fetchProfessionalProjects = async () => {
+      const data = await fetchProjects("professional");
+      setProfessionalProjects(data);
+    };
+
+    fetchProfessionalProjects();
+  }, []);
+
+  useEffect(() => {
+    // Fetch personal projects.
+    const fetchPersonalProjects = async () => {
+      const data = await fetchProjects("personal");
+      setPersonalProjects(data);
+    };
+
+    if (showPersonal && personalProjects.length === 0) fetchPersonalProjects();
+  }, [showPersonal, personalProjects]);
 
   return (
     <React.Fragment>

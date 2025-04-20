@@ -15,7 +15,10 @@ export default function ProjectCard({ project, index }) {
       <div className="w-full h-24 lg:h-56 relative mb-3">
         <Image
           className="rounded"
-          src={project.image}
+          src={
+            process.env.NEXT_PUBLIC_API_URL.replace("/api", "/") +
+            project.image_path
+          }
           alt={project.title}
           layout="fill"
           objectFit="cover"
