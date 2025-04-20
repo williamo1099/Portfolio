@@ -1,6 +1,8 @@
 import React from "react";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       className="
@@ -17,7 +19,7 @@ export default function Footer() {
       bg-primary text-foreground-dark
       "
     >
-      © 2024 William Oktavianus. Made with ❤️ in Bandung.
+      © {currentYear} William Oktavianus. Made with ❤️ in Bandung.
     </footer>
   );
 }
