@@ -1,15 +1,12 @@
-import Title from "@/app/components/title";
-import HighlightedText from "@/app/components/highlighted-text";
-import ProjectSelector from "./components/project-selector";
 import ProjectGrid from "./components/project-grid";
+import Title from "../components/title";
+import HighlightedText from "../components/highlighted-text";
 
 export const metadata = {
   title: "William Oktavianus | Projects",
 };
 
-export default async function ProjectsPage({ searchParams }) {
-  const showPersonal = (await searchParams)?.view === "personal";
-
+export default function ProjectsPage() {
   return (
     <>
       {/* Title */}
@@ -17,11 +14,8 @@ export default async function ProjectsPage({ searchParams }) {
         Some of <HighlightedText>My</HighlightedText> Projects
       </Title>
 
-      {/* Projects Type Selector */}
-      <ProjectSelector />
-
       {/* Projects Grid */}
-      <ProjectGrid showPersonal={showPersonal} />
+      <ProjectGrid />
     </>
   );
 }
