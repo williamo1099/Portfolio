@@ -1,7 +1,11 @@
 async function fetchProjects(type) {
   try {
     let response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/projects/${type}`
+      `${process.env.NEXT_PUBLIC_API_URL}/projects/${type}`,
+      {
+        cache: "force-cache",
+        next: { revalidate: 3600 },
+      }
     );
     let data = await response.json();
 
