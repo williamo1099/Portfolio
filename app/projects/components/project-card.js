@@ -17,6 +17,7 @@ export default function ProjectCard({ project, index }) {
           className="rounded"
           src={
             process.env.NEXT_PUBLIC_API_URL.replace("/api", "/") +
+            "storage/" +
             project.image_path
           }
           alt={project.title}
