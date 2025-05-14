@@ -13,7 +13,9 @@ export default function AboutMeStory() {
   useEffect(() => {
     const fetchCV = async () => {
       const path = await fetchCurriculumVitaePath();
-      setPath(process.env.NEXT_PUBLIC_API_URL.replace("/api", "/") + path);
+      setPath(
+        process.env.NEXT_PUBLIC_API_URL.replace("/api", "/") + "storage/" + path
+      );
     };
 
     fetchCV();
