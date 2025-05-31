@@ -6,6 +6,8 @@ import ContactFormField from "./contact-form-field";
 import ContactFormSubmitButton from "./contact-form-submit-button";
 import ContactFormMessage from "./contact-form-message";
 
+import { sendMail } from "@/services/mail-service";
+
 export default function ContactForm() {
   // Form data.
   const [formData, setFormData] = useState({
@@ -23,7 +25,7 @@ export default function ContactForm() {
   const [failed, setFailed] = useState(false);
 
   // Sending to EmailJS.
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Set sending status.
@@ -31,32 +33,14 @@ export default function ContactForm() {
     setSuccess(false);
     setFailed(false);
 
-    // Send email via EmailJS.
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
-      )
-      .then(
-        (response) => {
-          // Set sending status.
-          setSuccess(true);
-          setIsSending(false);
-
-          // Reset form.
-          setFormData({ name: "", email: "", message: "" });
-        },
-        (err) => {
-          setFailed(true);
-          setIsSending(false);
-        },
-      );
+    try {
+      await sendMail(formData.name, formData.email, formData.message);
+      setSuccess(true);
+    } catch (error) {
+      setFailed(true);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
