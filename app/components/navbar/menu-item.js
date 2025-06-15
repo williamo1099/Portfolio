@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 export default function MenuItem({ link, title, index, isActive, isMenuOpen }) {
   return (
     <motion.li
-      initial={{ x: "100%", opacity: 0 }} // Start off-screen
-      animate={isMenuOpen ? { x: 0, opacity: 1 } : { x: "100%", opacity: 0 }}
+      initial={{ x: 100, opacity: 0 }} // Start off-screen
+      animate={{ x: 0, opacity: 1 }}
       transition={{
         duration: 0.5,
         delay: index * 0.2,
         ease: "easeInOut",
       }}
-      className={`lg:!translate-x-0 lg:!opacity-100`}
+      className={`lg:!translate-x-0 lg:!opacity-100 lg:!transform-none`}
     >
       <Link
         href={link}
         className={`
           // Spacing
-          border-b-2 border-transparent px-2 py-1
+          border-b-2 border-transparent px-4 py-2
 
           // Typography
           hover:text-primary
@@ -33,8 +33,6 @@ export default function MenuItem({ link, title, index, isActive, isMenuOpen }) {
           ${
             isActive
               ? `
-                // Active Spacing
-                px-4 py-2
 
                 // Active Appearance
                 bg-primary text-white font-bold rounded-md

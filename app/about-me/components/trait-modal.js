@@ -10,7 +10,7 @@ export default function TraitModal({ trait, isModalOpen, onClose }) {
 
   return ReactDOM.createPortal(
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 p-0 transition-opacity duration-300 ease-in-out ${
+      className={`fixed inset-0 flex items-center justify-center bg-black/50 z-50 p-0 transition-opacity duration-300 ease-in-out ${
         isModalOpen ? "opacity-100" : "opacity-0"
       }`}
       onClick={onClose}
@@ -45,6 +45,6 @@ export default function TraitModal({ trait, isModalOpen, onClose }) {
         </div>
       </div>
     </div>,
-    document.getElementById("modal-root"),
+    document.getElementById("modal-root")
   );
 }

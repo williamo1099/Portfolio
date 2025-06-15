@@ -21,7 +21,7 @@ export default function MenuList({ isMenuOpen }) {
 
         // Spacing
         justify-center items-center
-        space-y-6 lg:space-y-0 lg:space-x-6
+        gap-y-6 lg:gap-y-0 lg:gap-x-4
 
         // Typography
         text-lg lg:text-base font-medium text-center lg:text-left
