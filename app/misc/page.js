@@ -3,6 +3,10 @@ import HighlightedText from "../components/highlighted-text";
 import Title from "../components/title";
 import Separator from "../components/separator";
 
+export const metadata = {
+  title: "William Oktavianus | Misc",
+};
+
 export default function MiscPage() {
   return (
     <>

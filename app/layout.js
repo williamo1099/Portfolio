@@ -1,6 +1,4 @@
-"use client";
-import dynamic from "next/dynamic";
-
+import ThemeWrapper from "./components/theme-wrapper";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 import ThemeToggle from "./components/theme-toggle";
@@ -8,11 +6,38 @@ import TriangleBackground from "./components/triangle-background";
 
 import "./globals.css";
 
-// ThemeProvider with SSR disabled.
-const ThemeProvider = dynamic(
-  () => import("next-themes").then((mod) => mod.ThemeProvider),
-  { ssr: false }
-);
+export const viewport = {
+  themeColor: "#6595ce",
+  colorScheme: "light dark",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
+export const metadata = {
+  title: "William Oktavianus",
+  description:
+    "Portfolio of William Oktavianus - a software developer, artist and lifelong learner",
+  keywords: [
+    "William Oktavianus",
+    "William Oktavianus Kurniawan",
+    "williamo1099",
+    "Software Developer",
+    "Artist",
+    "Lifelong Learner",
+  ],
+  openGraph: {
+    title: "William Oktavianus",
+    description:
+      "Portfolio of William Oktavianus - a software developer, artist and lifelong learner",
+    url: "https://williamoktavianus.dev",
+    siteName: "William Oktavianus",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: "index, follow",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -32,7 +57,7 @@ export default function RootLayout({ children }) {
           bg-background-light dark:bg-background-dark
         `}
       >
-        <ThemeProvider attribute="class" enableSystem={true}>
+        <ThemeWrapper>
           {/* Modal */}
           <div id="modal-root"></div>
 
@@ -61,7 +86,7 @@ export default function RootLayout({ children }) {
 
           {/* Footer */}
           <Footer />
-        </ThemeProvider>
+        </ThemeWrapper>
       </body>
     </html>
   );

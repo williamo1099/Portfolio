@@ -1,10 +1,6 @@
 import Introduction from "./home/components/introduction";
 import SocialMediaList from "./home/components/social-media-list";
 
-export const metadata = {
-  title: "William Oktavianus",
-};
-
 export default function HomePage() {
   return (
     <>
