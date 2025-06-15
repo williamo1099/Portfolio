@@ -6,10 +6,11 @@ import MenuItem from "./menu-item";
 
 export default function MenuList({ isMenuOpen }) {
   const pathname = usePathname();
-  const isActive = (path) => pathname === path;
+  const normalize = (url) => url.replace(/\/+$/, "") || "/";
+  const isActive = (path) => normalize(pathname) === normalize(path);
 
   const filteredMenus = menus.filter(
-    (menu) => menu.link !== "/misc" || pathname === "/misc"
+    (menu) => menu.link !== "/misc" || normalize(pathname) === "/misc"
   );
 
   return (
