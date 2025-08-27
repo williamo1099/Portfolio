@@ -39,6 +39,18 @@ export default function ProjectCard({ project, index }) {
           </span>
         ))}
       </div>
+
+      {/* URL */}
+      {project.url && (
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-primary mt-2 hover:underline"
+        >
+          View Project ↗
+        </a>
+      )}
     </motion.div>
   );
 }
