@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -19,9 +19,12 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
-    "tailwindcss": "^4.1.10"
+    "tailwindcss": "^4.1.10",
+    "typescript": "^5.9.3"
   }
 }

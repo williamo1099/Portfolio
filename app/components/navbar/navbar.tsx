@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-import MenuList from "./menu-list";
 import MenuIcon from "./menu-icon";
+import MenuList from "./menu-list";
 
 export default function Navbar() {
   const pathname = usePathname();
