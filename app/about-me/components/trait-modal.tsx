@@ -1,11 +1,22 @@
-import { useEffect } from "react";
 import ReactDOM from "react-dom";
 import Image from "next/image";
 
 import TraitQuote from "./trait-quote";
 import Separator from "@/app/components/separator";
 
-export default function TraitModal({ trait, isModalOpen, onClose }) {
+import { TraitItem } from "@/data/traits";
+
+interface TraitModalProps {
+  trait: TraitItem;
+  isModalOpen: boolean;
+  onClose: () => void;
+}
+
+export default function TraitModal({
+  trait,
+  isModalOpen,
+  onClose,
+}: TraitModalProps) {
   if (!isModalOpen) return null;
 
   return ReactDOM.createPortal(

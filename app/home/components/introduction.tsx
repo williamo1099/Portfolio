@@ -4,7 +4,13 @@ import React from "react";
 import HighlightedText from "@/app/components/highlighted-text";
 import TypingText from "@/app/components/typing-text";
 
-export default function Introduction({ name = "William Oktavianus" }) {
+interface IntroductionProps {
+  name?: string;
+}
+
+export default function Introduction({
+  name = "William Oktavianus",
+}: IntroductionProps) {
   return (
     <React.Fragment>
       {/* Name */}

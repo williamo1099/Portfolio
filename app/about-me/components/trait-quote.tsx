@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-export default function TraitQuote({ quote }) {
+import { TraitQuote as TraitQuoteInterface } from "@/data/traits";
+
+interface TraitQuoteProps {
+  quote: TraitQuoteInterface;
+}
+
+export default function TraitQuote({ quote }: TraitQuoteProps) {
   return (
     <div className="flex flex-row space-x-2 bg-gray-200 rounded-lg p-2 mx-5 mt-2">
       {/* Quote icon */}
