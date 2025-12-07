@@ -14,7 +14,9 @@ function mapProject(api: Record<string, unknown>): Project {
   };
 }
 
-async function fetchProjects({ type }: FetchProjectsProps): Promise<Project[]> {
+export async function fetchProjects({
+  type,
+}: FetchProjectsProps): Promise<Project[]> {
   try {
     let response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/projects/${type}`
@@ -32,5 +34,3 @@ async function fetchProjects({ type }: FetchProjectsProps): Promise<Project[]> {
     return [];
   }
 }
-
-module.exports = { fetchProjects };
