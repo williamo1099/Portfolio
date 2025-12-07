@@ -2,6 +2,11 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
+interface MenuIconProps {
+  isMenuOpen: boolean;
+  toggleMenu: () => void;
+}
+
 export default function MenuIcon({ isMenuOpen, toggleMenu }) {
   const { theme } = useTheme();
 
