@@ -16,7 +16,7 @@ export default function ProjectGrid() {
   useEffect(() => {
     // Fetch professional projects.
     const fetchProfessionalProjects = async () => {
-      const data = await fetchProjects("professional");
+      const data = await fetchProjects({ type: "professional" });
       setProfessionalProjects(data);
     };
 
@@ -26,7 +26,7 @@ export default function ProjectGrid() {
   useEffect(() => {
     // Fetch personal projects.
     const fetchPersonalProjects = async () => {
-      const data = await fetchProjects("personal");
+      const data = await fetchProjects({ type: "personal" });
       setPersonalProjects(data);
     };
 
