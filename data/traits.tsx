@@ -1,8 +1,23 @@
+import { ReactNode } from "react";
 import Link from "next/link";
 
 import HighlightedText from "@/app/components/highlighted-text";
 
-export const traits = [
+export interface TraitQuote {
+  text: string;
+  author: string;
+  authorLink: string;
+}
+
+export interface TraitItem {
+  title: string;
+  description: ReactNode;
+  quote: TraitQuote;
+  backgroundColor: string;
+  textColor: string;
+}
+
+export const traits: TraitItem[] = [
   // Clean Code
   {
     title: "Clean Code",

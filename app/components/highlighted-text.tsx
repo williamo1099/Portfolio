@@ -2,12 +2,12 @@ import React, { ReactNode } from "react";
 
 interface HighlightedTextProps {
   children: ReactNode;
-  additionalClassNames: string;
+  additionalClassNames?: string;
 }
 
 export default function HighlightedText({
   children,
-  additionalClassNames,
+  additionalClassNames = "",
 }: HighlightedTextProps) {
   return (
     <span

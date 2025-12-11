@@ -4,7 +4,7 @@ export default function ContactFormField({
   labelName,
   inputName,
   fieldType = "input",
-  inputType,
+  inputType = "",
   placeholder,
   value,
   handleChange,

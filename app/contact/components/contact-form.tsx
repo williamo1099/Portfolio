@@ -34,7 +34,11 @@ export default function ContactForm() {
     setFailed(false);
 
     try {
-      await sendMail(formData.name, formData.email, formData.message);
+      await sendMail({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      });
       setSuccess(true);
     } catch (error) {
       setFailed(true);

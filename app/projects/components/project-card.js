@@ -18,7 +18,7 @@ export default function ProjectCard({ project, index }) {
           src={
             process.env.NEXT_PUBLIC_API_URL.replace("/api", "/") +
             "storage/" +
-            project.image_path
+            project.imagePath
           }
           alt={project.title}
           layout="fill"

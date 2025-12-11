@@ -1,4 +1,16 @@
-async function sendMail(name, email, message) {
+import { ApiResponse } from "@/types/api";
+
+interface SendMailProps {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export async function sendMail({
+  name,
+  email,
+  message,
+}: SendMailProps): Promise<boolean> {
   try {
     let response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/mail`, {
       method: "POST",
@@ -7,17 +19,17 @@ async function sendMail(name, email, message) {
       },
       body: JSON.stringify({ name, email, message }),
     });
-    let data = await response.json();
+    let data: ApiResponse<null> = await response.json();
 
     // Throw error if request is not successful.
     if (!data.success) {
       throw data.message;
     }
 
-    return data.data;
+    return true;
   } catch (ex) {
     console.error(ex);
-    return [];
+    return false;
   }
 }
 
