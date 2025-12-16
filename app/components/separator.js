@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export default function Separator({
   separatorBits = "011100100110010101101001",

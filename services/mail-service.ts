@@ -32,5 +32,3 @@ export async function sendMail({
     return false;
   }
 }
-
-module.exports = { sendMail };
