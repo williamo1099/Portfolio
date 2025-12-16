@@ -1,11 +1,17 @@
 "use client";
 import { motion } from "motion/react";
 
+interface ProjectSelector {
+  showProfessional: () => void;
+  showPersonal: () => void;
+  isShowingPersonal: boolean;
+}
+
 export default function ProjectSelector({
   showProfessional,
   showPersonal,
   isShowingPersonal,
-}) {
+}: ProjectSelector) {
   return (
     <div className="relative flex flex-row bg-background-light dark:bg-background-dark w-4/6 lg:w-2/6 rounded-full p-0 mt-5">
       {/* Sliding background */}

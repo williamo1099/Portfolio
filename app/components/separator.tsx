@@ -1,11 +1,17 @@
 "use client";
 import { motion } from "motion/react";
 
+interface SeparatorProps {
+  separatorBits?: string;
+  isVertical?: boolean;
+  additionalClassNames?: string;
+}
+
 export default function Separator({
   separatorBits = "011100100110010101101001",
   isVertical = false,
   additionalClassNames = "",
-}) {
+}: SeparatorProps) {
   return (
     <div className={`flex items-center justify-center ${additionalClassNames}`}>
       <div

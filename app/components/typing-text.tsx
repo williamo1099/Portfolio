@@ -10,6 +10,11 @@ export const letterVariants = {
   visible: { opacity: 1, transition: { opacity: { duration: 0 } } },
 };
 
+interface TypingTextProps {
+  text: string;
+  classNames: string;
+}
+
 export default function TypingText({ text, classNames }) {
   return (
     <motion.span

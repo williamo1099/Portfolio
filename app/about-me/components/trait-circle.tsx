@@ -3,12 +3,17 @@ import React, { useState } from "react";
 import { motion } from "motion/react";
 
 import TraitModal from "./trait-modal";
+import { TraitItem } from "@/data/traits";
+
+interface TraitCircleProps {
+  trait: TraitItem;
+}
 
 export default function TraitCircle({ trait }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const words = trait.title.split(/[\s\W_]+/);
-  const delay = (Math.random() * 2 + 1).toFixed(2);
+  const delay = Number((Math.random() * 2 + 1).toFixed(2));
 
   return (
     <React.Fragment>

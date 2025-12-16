@@ -1,6 +1,12 @@
 import { motion } from "motion/react";
 
-export default function ContactFormSubmitButton({ isSending }) {
+interface ContactFormSubmitButtonProps {
+  isSending: boolean;
+}
+
+export default function ContactFormSubmitButton({
+  isSending,
+}: ContactFormSubmitButtonProps) {
   return (
     <button
       className="bg-primary text-white font-medium rounded-lg py-2 mt-5 disabled:cursor-wait disabled:opacity-50 flex items-center justify-center"

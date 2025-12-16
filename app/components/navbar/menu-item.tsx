@@ -2,7 +2,21 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 
-export default function MenuItem({ link, title, index, isActive, isMenuOpen }) {
+interface MenuItemProps {
+  link: string;
+  title: string;
+  index: number;
+  isActive: boolean;
+  isMenuOpen?: boolean;
+}
+
+export default function MenuItem({
+  link,
+  title,
+  index,
+  isActive,
+  isMenuOpen,
+}: MenuItemProps) {
   return (
     <motion.li
       initial={{ x: 100, opacity: 0 }} // Start off-screen
