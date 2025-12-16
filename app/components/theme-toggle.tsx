@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -27,7 +27,7 @@ export default function ThemeToggle() {
 
         // Background & Appearance
         bg-accent rounded-full
-        shadow-lg
+        shadow-lg cursor-pointer
 
         // Typography
         text-white
@@ -35,7 +35,7 @@ export default function ThemeToggle() {
       aria-label="Toggle Theme"
       initial={{ width: 50, height: 50 }}
       whileHover={{ width: 180, height: 50 }}
-      transition={{ type: "linear" }}
+      transition={{ type: "tween", ease: "linear" }}
     >
       {/* Text */}
       <div className="hidden lg:block">

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import HighlightedText from "@/app/components/highlighted-text";
 import Title from "@/app/components/title";

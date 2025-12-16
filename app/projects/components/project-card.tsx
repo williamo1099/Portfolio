@@ -1,8 +1,14 @@
 "use client";
-import { motion } from "framer-motion";
+import { Project } from "@/types/project";
+import { motion } from "motion/react";
 import Image from "next/image";
 
-export default function ProjectCard({ project, index }) {
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
       key={index}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export const sentenceVariants = {
   hidden: {},
@@ -9,6 +9,11 @@ export const letterVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { opacity: { duration: 0 } } },
 };
+
+interface TypingTextProps {
+  text: string;
+  classNames: string;
+}
 
 export default function TypingText({ text, classNames }) {
   return (

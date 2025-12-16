@@ -1,4 +1,18 @@
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
+import { ChangeEvent } from "react";
+
+interface ContactFormFieldProps {
+  labelName: string;
+  inputName: string;
+  fieldType?: "input" | "textarea";
+  inputType?: string;
+  placeholder: string;
+  value: string;
+  handleChange: (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => void;
+  index: number;
+}
 
 export default function ContactFormField({
   labelName,
@@ -9,7 +23,7 @@ export default function ContactFormField({
   value,
   handleChange,
   index,
-}) {
+}: ContactFormFieldProps) {
   const classNames =
     "appearance-none rounded-none border-b-2 border-foreground-light dark:border-foreground-dark bg-background-light dark:bg-background-dark w-full p-2 mt-1 focus:outline-none focus:rounded focus:border-b-4 focus:border-2 focus:border-primary";
 
