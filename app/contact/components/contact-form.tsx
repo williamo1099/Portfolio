@@ -1,51 +1,13 @@
 "use client";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-
 import ContactFormField from "./contact-form-field";
 import ContactFormSubmitButton from "./contact-form-submit-button";
 import ContactFormMessage from "./contact-form-message";
 
-import { sendMail } from "@/services/mail-service";
+import useMail from "@/hooks/use-mail";
 
 export default function ContactForm() {
-  // Form data.
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  // Sending states.
-  const [isSending, setIsSending] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [failed, setFailed] = useState(false);
-
-  // Sending to EmailJS.
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Set sending status.
-    setIsSending(true);
-    setSuccess(false);
-    setFailed(false);
-
-    try {
-      await sendMail({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      });
-      setSuccess(true);
-    } catch (error) {
-      setFailed(true);
-    } finally {
-      setIsSending(false);
-    }
-  };
+  const { formData, isSending, success, failed, handleChange, handleSubmit } =
+    useMail();
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col w-5/6 lg:w-1/2">
