@@ -5,33 +5,15 @@ import Masonry from "react-masonry-css";
 import ProjectSelector from "./project-selector";
 import ProjectCard from "./project-card";
 
-// import { personalProjects, professionalProjects } from "@/data/projects";
-import { fetchProjects } from "@/services/project-service";
+import useProject from "@/hooks/use-project";
 
 export default function ProjectGrid() {
-  const [personalProjects, setPersonalProjects] = useState([]);
-  const [professionalProjects, setProfessionalProjects] = useState([]);
-  const [showPersonal, setShowPersonal] = useState(false);
-
-  useEffect(() => {
-    // Fetch professional projects.
-    const fetchProfessionalProjects = async () => {
-      const data = await fetchProjects({ type: "professional" });
-      setProfessionalProjects(data);
-    };
-
-    fetchProfessionalProjects();
-  }, []);
-
-  useEffect(() => {
-    // Fetch personal projects.
-    const fetchPersonalProjects = async () => {
-      const data = await fetchProjects({ type: "personal" });
-      setPersonalProjects(data);
-    };
-
-    if (showPersonal && personalProjects.length === 0) fetchPersonalProjects();
-  }, [showPersonal, personalProjects]);
+  const {
+    showPersonal,
+    personalProjects,
+    professionalProjects,
+    setShowPersonal,
+  } = useProject();
 
   return (
     <React.Fragment>
